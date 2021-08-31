@@ -1,0 +1,48 @@
+{
+  "name": "quasar-2-typescript",
+  "version": "1.8.0",
+  "description": "Quasar 2 + TypeScript demo project",
+  "author": "Даниил Пронин <mail@grawl.ru>",
+  "scripts": {
+    "start": "cd ./dist/ssr && NODE_ENV=\"production\" yarn start",
+    "dev": "quasar dev",
+    "dev-ssr": "quasar dev --mode ssr",
+    "build": "quasar build",
+    "build-ssr": "quasar build --mode ssr",
+    "lint": "eslint --fix --ext .js,.ts,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "@types/compression": "^1.7.1",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "quasar": "^2.0.3",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@quasar/app": "^3.0.4",
+    "@types/node": "^10.17.15",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "esm": "^3.2.25"
+  }
+}
