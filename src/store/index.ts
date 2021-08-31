@@ -1,11 +1,17 @@
 import { store } from 'quasar/wrappers'
+
 import type { InjectionKey } from 'vue'
+
 import {
 	createStore,
 	Store as VuexStore,
 	useStore as vuexUseStore,
 } from 'vuex'
-import { ExampleModuleGetters } from 'src/store/module-example/getters'
+
+import exampleModule from './module-example'
+import { ExampleModuleGetters } from './module-example/getters'
+
+import secondModule, { SecondModuleGetters } from './second-module'
 
 // import example from './module-example'
 // import { State } from './module-example/state';
@@ -28,6 +34,7 @@ export interface RootState {
 
 export type RootGetters = {
 	exampleModule: ExampleModuleGetters
+	secondModule: SecondModuleGetters
 }
 
 type GT = Record<string, (s: unknown, g: unknown, rs: RootState, rg: RootGetters) => unknown>
@@ -53,7 +60,8 @@ export const storeKey: InjectionKey<VuexStore<RootState>> = Symbol('vuex-key')
 export default store(function (/* { ssrContext } */) {
 	const Store = createStore<RootState>({
 		modules: {
-			// example
+			exampleModule,
+			secondModule,
 		},
 
 		// enable strict mode (adds overhead!)

@@ -8,17 +8,18 @@ type LocalGetterSignature<R> = GetterSignature<S, ExampleModuleGetters, R>
 
 interface G {
 	getItemA: LocalGetterSignature<Item | undefined>
-	// getItemB(s: S, g: <Omit, GetterTree<S, RS> & G, k>): Item|undefined
-	// getItemB(s: S, g): Item|undefined
+	getItemB: LocalGetterSignature<Item|undefined>
 	getItemByName: LocalGetterSignature<(f: ItemName) => Item|undefined>
 	gg: LocalGetterSignature<Item | undefined>
+	getSecondModuleString: LocalGetterSignature<string>
 }
 
 const getters: GetterTree<S, RS> & G = {
 	getItemA: ({ list }) => list.find(({ name }) => name === 'a'),
-	// getItemB: (s, g) => g.getItemByName('b'),
+	getItemB: (s, g) => g.getItemByName('b'),
 	getItemByName: ({ list }) => (f: ItemName) => list.find(({ name }) => name === f),
 	gg: (s, g) => g.getItemA,
+	getSecondModuleString: (s, g, rs, rg) => rg.secondModule.getString,
 }
 
 export default getters

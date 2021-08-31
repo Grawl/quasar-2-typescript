@@ -2,7 +2,7 @@ export type ItemName = 'a'|'b'|'c'
 
 export type Item = { name: ItemName, id: number }
 
-export interface S {
+export type S = {
 	list: Item[]
 }
 

@@ -1,5 +1,7 @@
 import type { Module } from 'vuex'
+
 import { RootState as RS } from '../index'
+
 import state, { S } from './state'
 import actions from './actions'
 import getters from './getters'

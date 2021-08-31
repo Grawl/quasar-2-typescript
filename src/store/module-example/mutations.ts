@@ -1,9 +1,14 @@
 import type { MutationTree } from 'vuex'
+
 import { S } from './state'
 
-const mutations: MutationTree<S> = {
-	someMutation(/* state: State */) {
-		// your code
+interface M {
+	someMutation(s: S): void
+}
+
+const mutations: MutationTree<S> & M = {
+	someMutation(state) {
+		state.list.push({ id: 4, name: 'b' })
 	},
 }
 
