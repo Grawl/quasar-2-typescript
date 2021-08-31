@@ -30,7 +30,8 @@ export type RootGetters = {
 	exampleModule: ExampleModuleGetters
 }
 
-export type ModuleGetters<Getters> = { [Name in keyof Getters]: ReturnType<Getters[Name]> }
+type GT = Record<string, (s: unknown, g: unknown, rs: RootState, rg: RootGetters) => unknown>
+export type ModuleGetters<Getters extends GT> = { [Name in keyof Getters]: ReturnType<Getters[Name]> }
 
 export type GetterSignature<S, G, R = unknown> = (
 	s: S,
