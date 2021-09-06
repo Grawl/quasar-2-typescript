@@ -6892,17 +6892,6 @@ vue@3.1.5:
     "@vue/runtime-dom" "3.1.5"
     "@vue/shared" "3.1.5"
 
-vue@^2.6.14:
-  version "2.6.14"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
-  integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
-
-vuex-typings@kadet1090/vuex-typings:
-  version "1.0.0"
-  resolved "https://codeload.github.com/kadet1090/vuex-typings/tar.gz/e8301789f51fb2caa493d1c27decd11f9999421c"
-  dependencies:
-    vue "^2.6.14"
-
 vuex@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
